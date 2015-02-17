@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84D335B61A931FEA0054372A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D335B51A931FEA0054372A /* Foundation.framework */; };
+		84D335B81A931FEA0054372A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D335B71A931FEA0054372A /* CoreGraphics.framework */; };
+		84D335BA1A931FEA0054372A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D335B91A931FEA0054372A /* UIKit.framework */; };
+		84D335C01A931FEA0054372A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D335BE1A931FEA0054372A /* InfoPlist.strings */; };
+		84D335C21A931FEA0054372A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D335C11A931FEA0054372A /* main.m */; };
+		84D335C61A931FEA0054372A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D335C51A931FEA0054372A /* AppDelegate.m */; };
+		84D335C91A931FEA0054372A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D335C71A931FEA0054372A /* Main.storyboard */; };
+		84D335CC1A931FEA0054372A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D335CB1A931FEA0054372A /* ViewController.m */; };
+		84D335CE1A931FEA0054372A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D335CD1A931FEA0054372A /* Images.xcassets */; };
+		84D335D51A931FEA0054372A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D335D41A931FEA0054372A /* XCTest.framework */; };
+		84D335D61A931FEA0054372A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D335B51A931FEA0054372A /* Foundation.framework */; };
+		84D335D71A931FEA0054372A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D335B91A931FEA0054372A /* UIKit.framework */; };
+		84D335DF1A931FEA0054372A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D335DD1A931FEA0054372A /* InfoPlist.strings */; };
+		84D335E11A931FEA0054372A /* TileGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D335E01A931FEA0054372A /* TileGameTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84D335D81A931FEA0054372A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D335AA1A931FE90054372A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D335B11A931FEA0054372A;
+			remoteInfo = TileGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84D335B21A931FEA0054372A /* TileGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D335B51A931FEA0054372A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84D335B71A931FEA0054372A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84D335B91A931FEA0054372A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84D335BD1A931FEA0054372A /* TileGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TileGame-Info.plist"; sourceTree = "<group>"; };
+		84D335BF1A931FEA0054372A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84D335C11A931FEA0054372A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84D335C31A931FEA0054372A /* TileGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TileGame-Prefix.pch"; sourceTree = "<group>"; };
+		84D335C41A931FEA0054372A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84D335C51A931FEA0054372A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84D335C81A931FEA0054372A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84D335CA1A931FEA0054372A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84D335CB1A931FEA0054372A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84D335CD1A931FEA0054372A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84D335D31A931FEA0054372A /* TileGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TileGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D335D41A931FEA0054372A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84D335DC1A931FEA0054372A /* TileGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TileGameTests-Info.plist"; sourceTree = "<group>"; };
+		84D335DE1A931FEA0054372A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84D335E01A931FEA0054372A /* TileGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileGameTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84D335AF1A931FEA0054372A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D335B81A931FEA0054372A /* CoreGraphics.framework in Frameworks */,
+				84D335BA1A931FEA0054372A /* UIKit.framework in Frameworks */,
+				84D335B61A931FEA0054372A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D335D01A931FEA0054372A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D335D51A931FEA0054372A /* XCTest.framework in Frameworks */,
+				84D335D71A931FEA0054372A /* UIKit.framework in Frameworks */,
+				84D335D61A931FEA0054372A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84D335A91A931FE90054372A = {
+			isa = PBXGroup;
+			children = (
+				84D335BB1A931FEA0054372A /* TileGame */,
+				84D335DA1A931FEA0054372A /* TileGameTests */,
+				84D335B41A931FEA0054372A /* Frameworks */,
+				84D335B31A931FEA0054372A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84D335B31A931FEA0054372A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84D335B21A931FEA0054372A /* TileGame.app */,
+				84D335D31A931FEA0054372A /* TileGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84D335B41A931FEA0054372A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84D335B51A931FEA0054372A /* Foundation.framework */,
+				84D335B71A931FEA0054372A /* CoreGraphics.framework */,
+				84D335B91A931FEA0054372A /* UIKit.framework */,
+				84D335D41A931FEA0054372A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84D335BB1A931FEA0054372A /* TileGame */ = {
+			isa = PBXGroup;
+			children = (
+				84D335C41A931FEA0054372A /* AppDelegate.h */,
+				84D335C51A931FEA0054372A /* AppDelegate.m */,
+				84D335C71A931FEA0054372A /* Main.storyboard */,
+				84D335CA1A931FEA0054372A /* ViewController.h */,
+				84D335CB1A931FEA0054372A /* ViewController.m */,
+				84D335CD1A931FEA0054372A /* Images.xcassets */,
+				84D335BC1A931FEA0054372A /* Supporting Files */,
+			);
+			path = TileGame;
+			sourceTree = "<group>";
+		};
+		84D335BC1A931FEA0054372A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D335BD1A931FEA0054372A /* TileGame-Info.plist */,
+				84D335BE1A931FEA0054372A /* InfoPlist.strings */,
+				84D335C11A931FEA0054372A /* main.m */,
+				84D335C31A931FEA0054372A /* TileGame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84D335DA1A931FEA0054372A /* TileGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				84D335E01A931FEA0054372A /* TileGameTests.m */,
+				84D335DB1A931FEA0054372A /* Supporting Files */,
+			);
+			path = TileGameTests;
+			sourceTree = "<group>";
+		};
+		84D335DB1A931FEA0054372A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D335DC1A931FEA0054372A /* TileGameTests-Info.plist */,
+				84D335DD1A931FEA0054372A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84D335B11A931FEA0054372A /* TileGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D335E41A931FEA0054372A /* Build configuration list for PBXNativeTarget "TileGame" */;
+			buildPhases = (
+				84D335AE1A931FEA0054372A /* Sources */,
+				84D335AF1A931FEA0054372A /* Frameworks */,
+				84D335B01A931FEA0054372A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TileGame;
+			productName = TileGame;
+			productReference = 84D335B21A931FEA0054372A /* TileGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84D335D21A931FEA0054372A /* TileGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D335E71A931FEA0054372A /* Build configuration list for PBXNativeTarget "TileGameTests" */;
+			buildPhases = (
+				84D335CF1A931FEA0054372A /* Sources */,
+				84D335D01A931FEA0054372A /* Frameworks */,
+				84D335D11A931FEA0054372A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84D335D91A931FEA0054372A /* PBXTargetDependency */,
+			);
+			name = TileGameTests;
+			productName = TileGameTests;
+			productReference = 84D335D31A931FEA0054372A /* TileGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84D335AA1A931FE90054372A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Connor Kuehnle";
+				TargetAttributes = {
+					84D335D21A931FEA0054372A = {
+						TestTargetID = 84D335B11A931FEA0054372A;
+					};
+				};
+			};
+			buildConfigurationList = 84D335AD1A931FE90054372A /* Build configuration list for PBXProject "TileGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84D335A91A931FE90054372A;
+			productRefGroup = 84D335B31A931FEA0054372A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84D335B11A931FEA0054372A /* TileGame */,
+				84D335D21A931FEA0054372A /* TileGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84D335B01A931FEA0054372A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D335CE1A931FEA0054372A /* Images.xcassets in Resources */,
+				84D335C01A931FEA0054372A /* InfoPlist.strings in Resources */,
+				84D335C91A931FEA0054372A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D335D11A931FEA0054372A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D335DF1A931FEA0054372A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84D335AE1A931FEA0054372A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D335CC1A931FEA0054372A /* ViewController.m in Sources */,
+				84D335C61A931FEA0054372A /* AppDelegate.m in Sources */,
+				84D335C21A931FEA0054372A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D335CF1A931FEA0054372A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D335E11A931FEA0054372A /* TileGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84D335D91A931FEA0054372A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D335B11A931FEA0054372A /* TileGame */;
+			targetProxy = 84D335D81A931FEA0054372A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84D335BE1A931FEA0054372A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D335BF1A931FEA0054372A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84D335C71A931FEA0054372A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D335C81A931FEA0054372A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84D335DD1A931FEA0054372A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D335DE1A931FEA0054372A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84D335E21A931FEA0054372A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84D335E31A931FEA0054372A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84D335E51A931FEA0054372A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TileGame/TileGame-Prefix.pch";
+				INFOPLIST_FILE = "TileGame/TileGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84D335E61A931FEA0054372A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TileGame/TileGame-Prefix.pch";
+				INFOPLIST_FILE = "TileGame/TileGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		84D335E81A931FEA0054372A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TileGame.app/TileGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TileGame/TileGame-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TileGameTests/TileGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		84D335E91A931FEA0054372A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TileGame.app/TileGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TileGame/TileGame-Prefix.pch";
+				INFOPLIST_FILE = "TileGameTests/TileGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84D335AD1A931FE90054372A /* Build configuration list for PBXProject "TileGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D335E21A931FEA0054372A /* Debug */,
+				84D335E31A931FEA0054372A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D335E41A931FEA0054372A /* Build configuration list for PBXNativeTarget "TileGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D335E51A931FEA0054372A /* Debug */,
+				84D335E61A931FEA0054372A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84D335E71A931FEA0054372A /* Build configuration list for PBXNativeTarget "TileGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D335E81A931FEA0054372A /* Debug */,
+				84D335E91A931FEA0054372A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84D335AA1A931FE90054372A /* Project object */;
+}
