@@ -10,4 +10,8 @@
 
 @interface TileBrain : NSObject
 
+-(TileBrain *) initWithButtonArray: (NSArray *) inButtons andDifficultyValue: (int) inDifficulty;
+-(void) setDifficulty: (int) inDifficulty;
+-(UIButton *) swipeMade: (UISwipeGestureRecognizer *) direction;
+
 @end

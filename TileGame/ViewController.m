@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TileBrain.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    BOOL animateInProgress;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *background;
 
@@ -28,7 +31,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *button14;
 @property (weak, nonatomic) IBOutlet UIButton *button15;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFree;
-@property (weak, nonatomic) IBOutlet UISlider *shuffleSlider;
+@property (weak, nonatomic) IBOutlet UISlider *difficultySlider;
+
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
+@property (weak, nonatomic) IBOutlet UIButton *shuffleButton;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+@property (strong, nonatomic) NSArray * buttons;
+
+@property (strong, nonatomic) TileBrain * brain;
 
 @end
 
@@ -48,23 +59,44 @@
     [upRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
     [downRecognizer setDirection:UISwipeGestureRecognizerDirectionDown];
     
-    [self.background addGestureRecognizer:leftRecognizer];
-    [self.background addGestureRecognizer:rightRecognizer];
-    [self.background addGestureRecognizer:upRecognizer];
-    [self.background addGestureRecognizer:downRecognizer];
+    [self.view addGestureRecognizer:leftRecognizer];
+    [self.view addGestureRecognizer:rightRecognizer];
+    [self.view addGestureRecognizer:upRecognizer];
+    [self.view addGestureRecognizer:downRecognizer];
     
+    self.brain = [[TileBrain alloc] initWithButtonArray:self.buttons
+                    andDifficultyValue: (([self.difficultySlider value] * 100) / 50)];
+    
+    animateInProgress = FALSE;
 }
 
 - (void) viewWasSwiped:(UISwipeGestureRecognizer *)recognizer {
-    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft){
-        NSLog(@"left");
-    } else if (recognizer.direction == UISwipeGestureRecognizerDirectionRight){
-        NSLog(@"right");
-    } else if (recognizer.direction == UISwipeGestureRecognizerDirectionUp){
-        NSLog(@"up");
-    } else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown){
-        NSLog(@"down");
+    if (animateInProgress) {
+        return;
     }
+    
+    UIButton * buttonToSwap = [self.brain swipeMade:recognizer];
+    if (buttonToSwap){
+        [self animateSwapWithButtonToSwap:buttonToSwap];
+    }
+}
+
+-(void) animateSwapWithButtonToSwap: (UIButton *) toSwap{
+    animateInProgress = TRUE;
+    [UIView animateWithDuration:0.5 animations:^{
+        CGRect oldFreeFrame = self.buttonFree.frame;
+        CGRect oldSwapFrame = toSwap.frame;
+        
+        toSwap.frame = oldFreeFrame;
+        self.buttonFree.frame = oldSwapFrame;
+    }];
+    animateInProgress = FALSE;
+}
+
+- (IBAction)resetButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)shuffleButtonPressed:(UIButton *)sender {
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,8 +106,27 @@
 }
 
 - (IBAction)sliderChanged:(UISlider *)sender {
+//    NSLog(@"value1: %f", sender.value);
+//    float value = (sender.value * 100) / 2;
+//    NSLog(@"value2: %f", value);
+
+    
+    
+    [self.brain setDifficulty: (sender.value * 100) / 2];
     return;
 }
 
+-(NSArray *) buttons {
+    if ( ! _buttons){
+        _buttons = [[NSArray alloc] initWithObjects:
+                    self.button1, self.button2, self.button3, self.button4,
+                    self.button5, self.button6, self.button7, self.button8,
+                    self.button9, self.button10, self.button11, self.button12,
+                    self.button13, self.button14, self.button15, self.buttonFree,
+                    nil];
+    }
+    
+    return _buttons;
+}
 
 @end
