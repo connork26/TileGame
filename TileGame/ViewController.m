@@ -11,6 +11,7 @@
 
 @interface ViewController (){
     BOOL animateInProgress;
+    gameState state;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *background;
@@ -31,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *button14;
 @property (weak, nonatomic) IBOutlet UIButton *button15;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFree;
+
 @property (weak, nonatomic) IBOutlet UISlider *difficultySlider;
 
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
@@ -38,6 +40,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @property (strong, nonatomic) NSArray * buttons;
+@property (strong, nonatomic) NSMutableArray * OGFramePostions;
 
 @property (strong, nonatomic) TileBrain * brain;
 
@@ -65,9 +68,27 @@
     [self.view addGestureRecognizer:downRecognizer];
     
     self.brain = [[TileBrain alloc] initWithButtonArray:self.buttons
-                    andDifficultyValue: (([self.difficultySlider value] * 100) / 50)];
+                    andDifficultyValue: (([self.difficultySlider value] * 100) / 2)];
     
     animateInProgress = FALSE;
+    
+    self.OGFramePostions = [[NSMutableArray alloc] init];
+    
+    for (UIButton * button in self.buttons){
+        [self.OGFramePostions addObject:[NSValue valueWithCGRect:button.frame]];
+    }
+    
+    [self.buttonFree setAlpha:0.0];
+    
+    for (UIButton * button in self.buttons){
+        button.layer.cornerRadius = 5;
+    }
+    
+    self.resetButton.layer.cornerRadius = 5;
+    self.shuffleButton.layer.cornerRadius = 5;
+    
+    state = preGame;
+    
 }
 
 - (void) viewWasSwiped:(UISwipeGestureRecognizer *)recognizer {
@@ -79,24 +100,57 @@
     if (buttonToSwap){
         [self animateSwapWithButtonToSwap:buttonToSwap];
     }
+    
+    if (state == playing) {
+        if ([self.brain playerHasWon]) {
+            [self.infoLabel setText:@"You Won!!!"];
+            state = won;
+        }
+    }
 }
 
 -(void) animateSwapWithButtonToSwap: (UIButton *) toSwap{
     animateInProgress = TRUE;
-    [UIView animateWithDuration:0.5 animations:^{
-        CGRect oldFreeFrame = self.buttonFree.frame;
-        CGRect oldSwapFrame = toSwap.frame;
-        
+    CGRect oldFreeFrame = self.buttonFree.frame;
+    CGRect oldSwapFrame = toSwap.frame;
+    
+    [UIView animateWithDuration:0.25 animations:^{
         toSwap.frame = oldFreeFrame;
+    } completion:^(BOOL finished){
         self.buttonFree.frame = oldSwapFrame;
     }];
+    
     animateInProgress = FALSE;
 }
 
 - (IBAction)resetButtonPressed:(UIButton *)sender {
+    animateInProgress = TRUE;
+    [self.infoLabel setText:@"Shuffle to Start Game!"];
+
+    [self.brain resetBoard];
+    [UIView animateWithDuration:0.5 animations:^{
+        int i = 0;
+        for (UIButton * button in self.buttons){
+            button.frame = [self.OGFramePostions[i++] CGRectValue];
+        }
+    }];
+    animateInProgress = FALSE;
+    
+    state = preGame;
 }
 
 - (IBAction)shuffleButtonPressed:(UIButton *)sender {
+    state = playing;
+    [self.infoLabel setText:@""];
+    NSArray * newboard = [self.brain shuffleBoard];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        int i = 0;
+        for (UIButton * new in newboard){
+            new.frame = [self.OGFramePostions[i++] CGRectValue] ;
+        }
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,12 +160,6 @@
 }
 
 - (IBAction)sliderChanged:(UISlider *)sender {
-//    NSLog(@"value1: %f", sender.value);
-//    float value = (sender.value * 100) / 2;
-//    NSLog(@"value2: %f", value);
-
-    
-    
     [self.brain setDifficulty: (sender.value * 100) / 2];
     return;
 }

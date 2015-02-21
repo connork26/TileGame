@@ -13,5 +13,22 @@
 -(TileBrain *) initWithButtonArray: (NSArray *) inButtons andDifficultyValue: (int) inDifficulty;
 -(void) setDifficulty: (int) inDifficulty;
 -(UIButton *) swipeMade: (UISwipeGestureRecognizer *) direction;
+-(void) resetBoard;
+-(UIButton *) getButtonForShuffle;
+-(NSArray *) shuffleBoard;
+-(BOOL) playerHasWon;
+
+typedef NS_ENUM(int, direction){
+    left,
+    right,
+    up,
+    down
+};
+
+typedef NS_ENUM(int, gameState){
+    preGame,
+    playing,
+    won
+};
 
 @end
