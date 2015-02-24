@@ -36,23 +36,7 @@
     difficulty = inDifficulty;
 }
 
-//-(UIButton *) getButtonForShuffle {
-//    int num = rand() % 4;
-//    
-//    if (num == 0 && [self validMove:left]) {
-//        return [self moveFreeAndReturnSwappedObject:left];
-//    } else if (num == 1 && [self validMove:right]){
-//        return [self moveFreeAndReturnSwappedObject:right];
-//    } else if (num == 2 && [self validMove:up]){
-//        return [self moveFreeAndReturnSwappedObject:up];
-//    } else if (num == 3 && [self validMove:down]){
-//        return [self moveFreeAndReturnSwappedObject:down];
-//    }
-//    
-//    return nil;
-//}
-
--(NSArray *) shuffleBoard {
+-(NSMutableArray *) shuffleBoard {
     [self resetBoard];
     state = playing;
     
@@ -60,32 +44,34 @@
     
     int shuffles = 0;
     
+    NSMutableArray * tilesToSwap = [[NSMutableArray alloc] init];
+    
     while (shuffles < difficulty){
         switch (rand() % 4) {
             case 0:
-                if ([self validMove:left] && (lastShuffle != left)){
-                    [self moveFreeAndReturnSwappedObject:left];
+                if ([self validMove:left] && (lastShuffle != right)){
+                    [tilesToSwap addObject:[self moveFreeAndReturnSwappedObject:left]];
                     shuffles++;
                     lastShuffle = left;
                 }
                 break;
             case 1:
-                if ([self validMove:right] && (lastShuffle != right)){
-                    [self moveFreeAndReturnSwappedObject:right];
+                if ([self validMove:right] && (lastShuffle != left)){
+                    [tilesToSwap addObject:[self moveFreeAndReturnSwappedObject:right]];
                     shuffles++;
                     lastShuffle = right;
                 }
                 break;
             case 2:
-                if([self validMove:up] && (lastShuffle != up)){
-                    [self moveFreeAndReturnSwappedObject:up];
+                if([self validMove:up] && (lastShuffle != down)){
+                    [tilesToSwap addObject:[self moveFreeAndReturnSwappedObject:up]];
                     shuffles++;
                     lastShuffle = up;
                 }
                 break;
             case 3:
-                if ([self validMove:down] && (lastShuffle != down)) {
-                    [self moveFreeAndReturnSwappedObject:down];
+                if ([self validMove:down] && (lastShuffle != up)) {
+                    [tilesToSwap addObject:[self moveFreeAndReturnSwappedObject:down]];
                     shuffles++;
                     lastShuffle = down;
                 }
@@ -94,20 +80,9 @@
     }
     
     
-    return [self arrayatiseBoard];
+    return tilesToSwap;
 }
 
--(NSArray *) arrayatiseBoard{
-    
-    NSArray * ret = [[NSArray alloc] initWithObjects:
-        self.board[0][0], self.board[0][1], self.board[0][2], self.board[0][3],
-        self.board[1][0], self.board[1][1], self.board[1][2], self.board[1][3],
-        self.board[2][0], self.board[2][1], self.board[2][2], self.board[2][3],
-        self.board[3][0], self.board[3][1], self.board[3][2], self.board[3][3],
-        nil];
-    return ret;
-    
-}
 
 -(UIButton *) swipeMade:(UISwipeGestureRecognizer *) recognizer{
     if (recognizer.direction == UISwipeGestureRecognizerDirectionRight){
@@ -156,6 +131,7 @@
     
     return TRUE;
 }
+
 -(NSMutableArray *) board {
     if ( ! _board){
         _board = [[NSMutableArray alloc] initWithCapacity:4];
@@ -174,22 +150,6 @@
     [self.board insertObject: [NSMutableArray arrayWithObjects: self.buttons[4], self.buttons[5], self.buttons[6], self.buttons[7], nil] atIndex:1];
     [self.board insertObject: [NSMutableArray arrayWithObjects: self.buttons[8], self.buttons[9], self.buttons[10], self.buttons[11], nil] atIndex:2];
     [self.board insertObject: [NSMutableArray arrayWithObjects: self.buttons[12], self.buttons[13], self.buttons[14], self.buttons[15], nil] atIndex:3];
-}
-
--(UIButton *) swipeLeft {
-    if ([self validMove:left]){
-        return [self moveFreeAndReturnSwappedObject:left];
-    }
-    
-    return nil;
-}
-
--(UIButton *) swipeRight {
-    if ([self validMove:left]){
-        return [self moveFreeAndReturnSwappedObject:left];
-    }
-    
-    return nil;
 }
 
 -(NSArray *) getFreePositionAsArray{

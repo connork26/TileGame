@@ -14,8 +14,7 @@
 -(void) setDifficulty: (int) inDifficulty;
 -(UIButton *) swipeMade: (UISwipeGestureRecognizer *) direction;
 -(void) resetBoard;
--(UIButton *) getButtonForShuffle;
--(NSArray *) shuffleBoard;
+-(NSMutableArray *) shuffleBoard;
 -(BOOL) playerHasWon;
 
 typedef NS_ENUM(int, direction){

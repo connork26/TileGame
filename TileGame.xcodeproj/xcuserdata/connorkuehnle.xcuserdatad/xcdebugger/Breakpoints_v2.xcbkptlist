@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/ViewController.m"
-            timestampString = "446193911.382884"
+            timestampString = "446440242.554587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "-buttons"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/ViewController.m"
-            timestampString = "446193911.382884"
+            timestampString = "446440242.554587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "-buttons"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-getFreePositionAsArray"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "-getFreePositionAsArray"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "-getFreePositionAsArray"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "-moveFreeAndReturnSwappedObject:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-getFreePositionAsObject"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "@implementation TileBrain"
             landmarkType = "3">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-swipeMade:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193245.952295"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-resetBoard"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TileGame/TileBrain.m"
-            timestampString = "446193478.502601"
+            timestampString = "446440454.636498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-shuffleBoard"
             landmarkType = "5">
          </BreakpointContent>

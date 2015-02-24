@@ -124,34 +124,56 @@
 }
 
 - (IBAction)resetButtonPressed:(UIButton *)sender {
-    animateInProgress = TRUE;
     [self.infoLabel setText:@"Shuffle to Start Game!"];
 
     [self.brain resetBoard];
+    [self resetBoard];
+    
+    state = preGame;
+}
+
+-(void) resetBoard {
+    animateInProgress = TRUE;
+
     [UIView animateWithDuration:0.5 animations:^{
         int i = 0;
         for (UIButton * button in self.buttons){
             button.frame = [self.OGFramePostions[i++] CGRectValue];
         }
     }];
-    animateInProgress = FALSE;
     
-    state = preGame;
+    animateInProgress = FALSE;
 }
 
 - (IBAction)shuffleButtonPressed:(UIButton *)sender {
     state = playing;
     [self.infoLabel setText:@""];
-    NSArray * newboard = [self.brain shuffleBoard];
+    [self resetBoard];
     
-    [UIView animateWithDuration:0.5 animations:^{
-        int i = 0;
-        for (UIButton * new in newboard){
-            new.frame = [self.OGFramePostions[i++] CGRectValue] ;
-        }
-        
-    }];
+    NSMutableArray * tileSwaps = [self.brain shuffleBoard];
+    
+    [self animateSwaps:[tileSwaps objectEnumerator]];
+    [self.infoLabel setText:@"Play!"];
 }
+
+-(void) animateSwaps: (NSEnumerator *) enumerator
+{
+    UIButton *buttonToAnimate = [enumerator nextObject];
+    if( ! buttonToAnimate ) {
+        animateInProgress = NO;
+        return;
+    }
+    animateInProgress = YES;
+    [UIView animateWithDuration:0.15 animations:^{
+        CGRect temp = self.buttonFree.frame;
+        self.buttonFree.frame = buttonToAnimate.frame;
+        buttonToAnimate.frame = temp;
+    } completion:^(BOOL finished) {
+        [self animateSwaps:enumerator];
+    }];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
